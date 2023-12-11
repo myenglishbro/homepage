@@ -1,149 +1,386 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-
-    <title>Résumé</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myenglishbro</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <main>
-      <div class="resume">
-        <div class="container">
-          <div class="resume__block">
-            <h1 class="contact-info__header">Bulka</h1>
-            <h3 class="contact-info__sub-header">Senior Hooman Manager</h3>
+    <nav id="desktop-nav">
+      <div class="logo">Carlos Apolaya</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Carlos Apolaya</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
     
-            <div class="contact_info_container fh">
-              <div class="contact-info__block">
 
-                <a href="" rel="author" class="contact-info__item">
-                  <div class="contact-info__item-icon-wrapper">
-                    <svg class="contact-info__item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                      <path
-                        d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0
-                        192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535
-                        13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817
-                        80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span>Lviv, Ukraine</span>
-                </a>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Carlos Apolaya profile picture" />
+      </div>
+      <div class="section__text">
+      
+        <img src="./assets/waving.png" alt="Hand waving" class="waving-icon" />
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Carlos Apolaya </h1>
+        <p class="section__text__p2">Junior Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/dev-apolaya-carlos.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/carlosapolaya/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/myenglishbro'"
+          />
+        </div>
+      </div>
+    </section>
 
-                <a href="https://ua.linkedin.com/company/binary-studio_241166" rel="author" class="contact-info__item">
-                  <div class="contact-info__item-icon-wrapper">
-                    <svg class="contact-info__item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path
-                        d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9
-                        480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4
-                        416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9
-                        96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5
-                        38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9
-                        27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5
-                        62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span>binary-studio</span>
-                </a>
 
-
-              </div>
-    
-              <div class="contact-info__block contact-info__block--center">
-                <img class="contact-info__avatar" src="assets/avatar.png" alt="Avatar" />
-              </div>
-    
-              <div class="contact-info__block"></div>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Frontend Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Bachelors Degree in Systems Engineering</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+             
+Hello! I'm Carlos Apolaya Sánchez, a Junior Fullstack developer with experience in the MERN stack (MongoDB, Express, React, Node.js) and a strong eagerness to learn. Additionally, I am a passionate English teacher and the proud creator of MyEnglishBro. My background in systems engineering and my dedication to language learning have provided me with a unique combination of skills.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
 
-
-
-      <div class="container">
-  <div class="resume__block">
-    <div class="intro">
-      <div class="intro__icon-wrapper">
-        <svg class="intro__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path
-            d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7
-            24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0
-            26.5 21.5 48 48 48h128c26.5 0 48-21.5
-            48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64
-            64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0
-            103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0
-            48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
-          ></path>
-        </svg>
-      </div>
-      <p class="intro_text">Meow. I am a Binary Studio cat. Still got 7 lives. Work in IT, Full Stack Evil, all I do is sleep and try to help out hoomans with their projects whenever they need me.</p>
-    </div>
-  </div>
-</div>
-
-
-    </main>
-    <div class="container">
-      <div class="resume__block">
-        <div class="skills">
-          <h3 class="skills__header">Skills</h3>
-          <p class="skills__text">Sleep, eat, more sleep, meow, mrrr, purr.</p>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Aesthetic-Rouse (Argentina)</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/myenglishbro/Aesthetic-Rouse'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://myenglishbro.github.io/Aesthetic-Rouse/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Speak Up (Brazil)</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/No-Country/C11-32-REACT-NODE'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://c11-32-react-node.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">MyEnglishBro! (Perú)</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/myenglishbro/ucollege'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://myenglishbro-meb.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="container">
-      <div class="resume__block">
-        <div class="main-info fh">
-          <div class="experiences"></div>
-    
-          <div class="additional-info fv"></div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">temis_it@hotmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/carlosapolaya/">LinkedIn</a></p>
         </div>
       </div>
-    </div>
-
-
-    <h3 class="experiences__header">Experience</h3>
-    <div class="experiences__company">
-      <div class="experiences__company-header">
-        <span class="experiences__company-header-durability">For whole my life</span>
-        <h3 class="experiences__company-header-name">BinaryStudio</h3>
-      </div>
-    
-      <div class="experiences__company-project">
-        <span class="experiences__company-project-role"> Binary Studio Cat </span>
-        <h3 class="experiences__company-project-name">Hooman project</h3>
-        <ul class="experiences__company-project-responsibilities">
-          <li>Supported hoomans</li>
-          <li>Slept all the time</li>
-          <li>Lied on the keyboard</li>
-          <li>Watched my hoomans working</li>
-        </ul>
-      </div>
-    </div>
-
-
-    <div class="additional-info fv">
-      <div class="additional-info__education">
-        <h3 class="additional-info__education-header">Education</h3>
-        <div class="additional-info__education-university">
-          <span class="additional-info__education-university-durability"> 2021 </span>
-          <h3 class="additional-info__education-university-speciality">Cat track</h3>
-          <p class="additional-info__education-university-name">Binary Studio Academy</p>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-      </div>
-    
-      <div class="additional-info__languages">
-        <h3 class="additional-info__languages-header">Languages</h3>
-        <p class="additional-info__languages-item">Meow dialect</p>
-        <p class="additional-info__languages-item">Ukrainian (understand)</p>
-        <p class="additional-info__languages-item">English (don't understand)</p>
-      </div>
-    </div>
-
+      </nav>
+      <p>Copyright &#169; 2023 Carlos Apolaya. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 
 
 
