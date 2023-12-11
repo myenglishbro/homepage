@@ -2,7 +2,7 @@
 
 Welcome to my first personal website! This digital space serves as a representation of my professional identity, functioning primarily as an interactive résumé.
 
-![Website Preview](https://ibb.co/dbMFGLy)
+![Website Preview](https://i.ibb.co/RhbfzBW/221shots-so.png)
 
 ## Purpose 🚀
 
